@@ -5,26 +5,15 @@ public class Customer {
 	private String name;
 	private String address;
 	private double cashOnHand;
-	private int creditlength;
-	private double loanAmount;
-	
-	
-	
-	
-	public double getLoanAmount() {
-		return loanAmount;
-	}
-	public void setLoanAmount(int loanAmount) {
-		this.loanAmount = loanAmount;
-	}
-	public int getCreditlength() {
-		return creditlength;
-	}
-	public void setCreditlength(int creditlength) {
-		this.creditlength = creditlength;
-	}
 
+	
+	public Customer(String name, String address, double cashOnHand) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cashOnHand = cashOnHand;
 
+	}
 	
 	
 	public String getName() {
@@ -45,6 +34,7 @@ public class Customer {
 	public void setCashOnHand(double cashOnHand) {
 		this.cashOnHand = cashOnHand;
 	}
+
 
 	public void purchaseCar(Vehicle vehicle,Employee emp, boolean finance) {
 		

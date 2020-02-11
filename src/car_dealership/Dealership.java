@@ -16,11 +16,11 @@ public class Dealership {
 		 */
 		Scanner sc= new Scanner(System.in);
 		System.out.println("What is your name? ");
-		String name = sc.nextLine();
+		String Name = sc.nextLine();
 		System.out.println("What is your address? ");
-		String address = sc.nextLine();
+		String Address = sc.nextLine();
 		System.out.println("What is the make of the car you are purchasing? ");
-		String make = sc.nextLine();
+		String Make = sc.nextLine();
 		System.out.println("What is the model of the car? ");
 		String Model = sc.nextLine();
 		System.out.println("How much cash do you have with you? ");
@@ -43,16 +43,19 @@ public class Dealership {
         System.out.println("Age: "+age); 
         System.out.println("Mobile Number: "+mobileNo); 
         System.out.println("CGPA: "+cgpa); */
-		Customer cust1 = new Customer();
-		Vehicle vehicle = new Vehicle();
-		Employee emp = new Employee();
+		Customer cust1 = new Customer(Name,Address,Cash);
+		/*
 		cust1.setName(name);
 		cust1.setAddress(address);
-		cust1.setCashOnHand(Cash);
-		vehicle.setMake(make);
-		vehicle.setModel(Model);
-		vehicle.setPrice(15000);
-		vehicle.setYear(2020);
+		cust1.setCashOnHand(Cash);*/
+		Vehicle vehicle = new Vehicle(Make,Model,2020,15000);
+		Vehicle vehicle2 = new Vehicle("BMW","M3",2020,15000);
+		// Due to overriding .equals 
+		boolean value = vehicle2.equals(vehicle);
+		System.out.println(value);
+		
+		Employee emp = new Employee();
+
 		cust1.purchaseCar(vehicle, emp, Finance);
 
 
